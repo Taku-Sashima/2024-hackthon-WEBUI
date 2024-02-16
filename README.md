@@ -14,6 +14,7 @@
 run (command line)
 
 ```
+docker run -it --rm -v $(pwd):/usr/src -w /usr/src -p 3000:3000 node:16.16.0-alpine npm install #はじめだけ
 docker run -it --rm -v $(pwd):/usr/src -w /usr/src -p 3000:3000 node:16.16.0-alpine npm start
 ```
 
