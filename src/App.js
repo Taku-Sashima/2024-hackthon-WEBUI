@@ -1,6 +1,6 @@
 import './App.css';
-import Detail from './components/Detail';
-import Result from './components/Result.js';
+import Detail from './pages/Detail/Detail.js';
+import Result from './pages/Result/Result.js';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
