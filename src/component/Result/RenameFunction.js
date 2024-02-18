@@ -17,25 +17,27 @@ export default function RenameFunction(props){
 
   const modalContent = {
     background: "#faf291",
-    border: "8px solid #62b6f5", 
+    border: "8px solid #62b6f5",
     padding: "120px",
     borderRadius: "20px",
   };
 
   const input={
     lineHeight: "50px",
-  }
+    fontSize: "50px",
+  };
 
   const button ={
     backgroundColor: '#62b6f5',
-    width: '130px',
-    height:'30px',
+    width: '200px',
+    height:'40px',
     textAlign: "center",
     position: "static",
     margin: "auto",
     marginTop: "20px",
     color: 'white',
-  }
+    fontSize: "28px",
+  };
 
   const closeModal = () => {
     props.setShowModal(false);
@@ -54,7 +56,7 @@ export default function RenameFunction(props){
         <div className="overlay" style={overlay} >
           <div className="modalContent" style={modalContent}>
             <input style={input}
-              size="40"
+              size="20"
               value={props.text}
               onChange={(event) => props.Text(event.target.value)}
               type="text"
