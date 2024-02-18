@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import './Result.css';
-import ScentList from '../../component/Result/ScentList.js'
-import ScentObject from '../../component/Result/ScentObject.js'
+import ScentList from '../../component/Result/ScentList.js';
+import ScentObject from '../../component/Result/ScentObject.js';
 
 export default function Result() {
   const MOC_URL = "/moc/img/"
