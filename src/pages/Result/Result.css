@@ -37,6 +37,8 @@
     margin-left: 29%;
     position: relative;
     display: flex;
+    flex-flow: column;
+    overflow: auto;
 }
 .resultdetail{
     border: 3px solid #000000;
