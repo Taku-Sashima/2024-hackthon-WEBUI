@@ -1,6 +1,8 @@
 import React from 'react'
 import '../../pages/Result/Result.css';
 
+import usePatchName from './PatchName';
+
 export default function RenameFunction(props){
   const overlay = {
     position: "fixed",
@@ -39,13 +41,18 @@ export default function RenameFunction(props){
     fontSize: "28px",
   };
 
+  const patchName = usePatchName();
+
   const closeModal = () => {
     props.setShowModal(false);
-    if (props.text==""){
+    props.update()
+    var temp_name=props.text
+    if (props.text===""){
       ;//newNameを更新しない
     }else{
       props.setNewName(props.text);
-      props.setText("");
+      patchName(props.itemID, props.text)
+      props.Text("");
     }
   };
 
@@ -61,7 +68,7 @@ export default function RenameFunction(props){
               onChange={(event) => props.Text(event.target.value)}
               type="text"
             />
-            <div  style={button} onClick={closeModal}>
+            <div style={button} onClick={closeModal}>
             名前を変更する
             </div>
           </div>
