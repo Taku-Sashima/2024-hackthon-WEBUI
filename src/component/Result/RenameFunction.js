@@ -41,7 +41,7 @@ export default function RenameFunction(props){
     fontSize: "28px",
   };
 
-  const [responseName, setTempName, setItemID] = usePatchName();
+  const patchName = usePatchName();
 
   const closeModal = () => {
     props.setShowModal(false);
@@ -51,8 +51,7 @@ export default function RenameFunction(props){
       ;//newNameを更新しない
     }else{
       props.setNewName(props.text);
-      setItemID(props.itemID)
-      setTempName(props.text)
+      patchName(props.itemID, props.text)
       props.Text("");
     }
   };
