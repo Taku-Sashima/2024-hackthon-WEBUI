@@ -5,14 +5,19 @@ import '../../pages/Detail/Detail.css';
 export default function useSimilarScent(){
   const [similarScent, setSimilarScent] = useState({});
   const [itemID, setItemID] = useState(0)
-  const [tempName, setTempName] = useState("")
 
   useEffect(() => {
-    const url = 'http://localhost:8000//user_scent/' + String(itemID) +'/similar_scent_items'
-    getSimilarScent(url);
-  },[]);
+    getSimilarScent();
+  },[itemID]);
 
-  const getSimilarScent = (url) =>{
+  // useEffect(() => {
+  //   if (itemID !== 0) { // itemID が 0 でない場合にのみ実行
+  //     getSimilarScent();
+  //   }
+  // }, [itemID]);
+
+  const getSimilarScent = () =>{
+    const url = 'http://localhost:8000/user_scent/' + String(itemID) +'/similar_scent_items'
     axios.get(url)
       .then(response => {
         setSimilarScent(response.data);

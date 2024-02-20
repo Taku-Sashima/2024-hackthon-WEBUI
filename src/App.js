@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Result />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route path="/detail/:userScentId" element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );
