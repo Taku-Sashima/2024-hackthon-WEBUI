@@ -50,11 +50,8 @@ export default function RenameFunction(props) {
     } else {
       await patchName(props.itemID, props.text)
       props.update()
-      props.Text("");
     }
   };
-
-  // console.log("")
 
   return (
     <>

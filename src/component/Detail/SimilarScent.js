@@ -3,7 +3,7 @@ import React from 'react'
 //props以下を擬似データのものに変更する
 
 export default function SimilarScent(props){
-  const MOC_URL = "/moc/img/"
+  console.log(props.details)
 
   return(
     <div className="item">
@@ -12,9 +12,9 @@ export default function SimilarScent(props){
               <img src={props.details.img_url} className='numberimg' alt='number1'></img>
               <div className='itemname'>{props.details.item_name}</div>
           </div>
-          <img src={`${MOC_URL}peppermint.png`} className='itemimg' alt='number1'></img>
+          <img src={props.details.img_url} className='itemimg' alt={'item_img' + props.details.id}></img>
           <div className="details">
-              <div className="feature">{props.details.item_tags.tag1},{props.details.item_tags.tag2}</div>
+              <div className="feature">{props.details.item_tags[0]},{props.details.item_tags[1]}</div>
               <div className="class">{props.details.product_label}</div>
           </div>
           <div className="similarity">{props.details.similarity*100}%</div>

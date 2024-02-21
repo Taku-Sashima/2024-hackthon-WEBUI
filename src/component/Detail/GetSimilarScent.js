@@ -5,30 +5,18 @@ import {host} from '../../config.js'
 
 export default function useSimilarScent(){
   const [similarScent, setSimilarScent] = useState({});
-  const [itemID, setItemID] = useState(0)
 
-  useEffect(() => {
-    getSimilarScent();
-  },[itemID]);
-
-
-  // useEffect(() => {
-  //   if (itemID !== 0) { // itemID が 0 でない場合にのみ実行
-  //     getSimilarScent();
-  //   }
-  // }, [itemID]);
-
-  const getSimilarScent = () =>{
+  const getSimilarScent = (itemID) =>{
     const url = host + '/user_scent/' + String(itemID) +'/similar_scent_items'
     axios.get(url)
       .then(response => {
         setSimilarScent(response.data);
-        console.log(similarScent);
+        console.log("similar Scent", similarScent);
       })
       .catch(() => {
         console.log('通信に失敗しました');
       });
   }
 
-  return [similarScent, setItemID]
+  return [similarScent, getSimilarScent]
 }

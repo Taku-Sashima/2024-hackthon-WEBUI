@@ -10,14 +10,13 @@ const bgImg = {
 }
 
 export default function Detail() {
-	const [similarScent, setItemID] = useSimilarScent();
+	const [similarScent, getSimilarScent] = useSimilarScent();
 
 	const { userScentId } = useParams()
 	console.log(userScentId)
-	// setItemID(userScentId)
 
 	useEffect(() => {
-		setItemID(userScentId);
+		getSimilarScent(userScentId);
 	}, [userScentId]);
 
 	return (

@@ -9,7 +9,7 @@ export default function ScentList(props) {
   // const url = '/user_scent/' + {props.details.id}+'/similar_scent_items';
   const url = `/detail/${props.details.id}`;
   const [showModal, setShowModal] = useState(false); // Modalコンポーネントの表示の状態を定義する
-  const [text, setText] = useState("");
+  const [text, setText] = useState(props.details.label);
 
 
   const ShowModal = () => {
