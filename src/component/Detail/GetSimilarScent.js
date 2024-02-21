@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios'
 import '../../pages/Detail/Detail.css';
+import {host} from '../../config.js'
 
 export default function useSimilarScent(){
   const [similarScent, setSimilarScent] = useState({});
@@ -10,6 +11,7 @@ export default function useSimilarScent(){
     getSimilarScent();
   },[itemID]);
 
+
   // useEffect(() => {
   //   if (itemID !== 0) { // itemID が 0 でない場合にのみ実行
   //     getSimilarScent();
@@ -17,7 +19,7 @@ export default function useSimilarScent(){
   // }, [itemID]);
 
   const getSimilarScent = () =>{
-    const url = 'http://localhost:8000/user_scent/' + String(itemID) +'/similar_scent_items'
+    const url = host + '/user_scent/' + String(itemID) +'/similar_scent_items'
     axios.get(url)
       .then(response => {
         setSimilarScent(response.data);
