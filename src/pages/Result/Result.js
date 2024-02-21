@@ -25,7 +25,6 @@ export default function Result() {
   }, [wsClient]); // wsClientが変更されたときに再度設定する
 
 
-  console.log("readering");
   return (
     <>
       <div className='back'>
