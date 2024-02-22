@@ -11,7 +11,7 @@ export default function SimilarScent(props){
               <img src= {"/img/ranking/number" + `${Number(props.listIndex)+1 }` + ".png"} className='numberimg' alt='number1'></img>
               <div className='itemname'>{props.details.item_name}</div>
           </div>
-          <img src={props.details.img_url} className='itemimg' alt={'item_img' + props.details.id}></img>
+          <img src={"/img/item/item" + `${Number(props.listIndex)+1 }` + ".png"} className='itemimg' alt={'item_img' + props.details.id}></img>
           <div className="details">
               <div className="feature">{props.details.item_tags[0]},{props.details.item_tags[1]}</div>
               <div className="class">{props.details.product_label}</div>
