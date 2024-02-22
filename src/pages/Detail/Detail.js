@@ -24,7 +24,7 @@ export default function Detail() {
 			<div className="border">
 				<div className="detailtop">似た匂いの商品</div>
 				<div className="itemall">
-					{Object.keys(similarScent).map(key => <SimilarScent key={key} details={similarScent[key]} />)}
+					{Object.keys(similarScent).map(key => <SimilarScent key={key} details={similarScent[key]} listIndex={key} />)}
 				</div>
 			</div>
 		</div>
