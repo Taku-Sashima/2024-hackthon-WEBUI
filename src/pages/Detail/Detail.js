@@ -27,7 +27,7 @@ export default function Detail() {
 				{/* <div id = "changetext" className="detailtop" onClick= {changeText} >似た匂いの商品</div> */}
 				<ReversedRank isReversed={isReversed}  setIsReversed={setIsReversed}/>
 				<div className="itemall">
-					{similarScent && Object.keys(isReversed ? similarScent.toReversed() : similarScent).map(key => <SimilarScent key={key} details={similarScent[key]} />)}
+					{similarScent && Object.keys(isReversed ? similarScent.toReversed() : similarScent).map(key => <SimilarScent key={key} details={similarScent[key]} listIndex={key} />)}
 				</div>
 			</div>
 		</div>
