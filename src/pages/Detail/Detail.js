@@ -13,9 +13,7 @@ const bgImg = {
 export default function Detail() {
 	const [similarScent, getSimilarScent] = useSimilarScent();
 	const [isReversed, setIsReversed] = useState(false)
-
 	const { userScentId } = useParams()
-	console.log(userScentId)
 
 	useEffect(() => {
 		getSimilarScent(userScentId);

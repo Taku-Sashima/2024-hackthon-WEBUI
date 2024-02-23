@@ -22,7 +22,7 @@ export default function ScentList(props) {
   
   return (
     <div className="resultdetail">
-      <img src={`${MOC_URL}peppermint.png`} className='resultitemimg' alt='img'></img>
+      <img src={`${MOC_URL}perfume_ill.png`} className='resultitemimg' alt='img'></img>
       <div className='resultitemname' >
         <Link to={url} style={{ textDecoration: 'none', color: 'black' }}>{props.details.label.length > 6 ? (props.details.label.slice(0, 6) + "...")  : props.details.label}</Link>
       </div>
