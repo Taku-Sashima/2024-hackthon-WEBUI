@@ -7,6 +7,7 @@ import SimilarScent from '../../component/Detail/SimilarScent.js'
 import useSimilarScent from '../../component/Detail/GetSimilarScent.js'
 import ReversedRank from '../../component/Detail/ReversedRank.js'
 
+
 const bgImg = {
   '--back-detail-url': `url('/moc/img/backdetail.png')`
 }
@@ -23,7 +24,7 @@ export default function Detail() {
   const similarScentShow = isReversed ? similarScent?.toReversed() : similarScent
 
   return (
-    <div className="detail" style={bgImg}>
+    <div className="detail" style={bgImg} >
       <div className="border">
         <ReversedRank isReversed={isReversed} setIsReversed={setIsReversed} />
         <div className="itemall">

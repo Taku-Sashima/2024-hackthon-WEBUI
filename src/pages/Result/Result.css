@@ -63,8 +63,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-.resultitemimg {
-  padding: 0px 20px;
+
+.resultitemname{
+    text-decoration: none;
+    color: black;
+}
+.resultitemimg{
+    padding: 0px 20px;
 }
 .resulteditimg {
   padding-left: 10px;
