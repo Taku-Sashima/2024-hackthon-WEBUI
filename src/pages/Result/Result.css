@@ -28,13 +28,20 @@ body{
 .topname{
     position: relative;
     top: 80px;
+    width: 30%;
+    margin: auto;
     font-size: 70px;
-    font-weight: 500;
+    font-weight: 900;
     text-align: center;
+    color: white;
+    background-color: #8BC2EA;
+    border: solid 3px #0B60A3;
+    border-radius: 5%;
 }
 .resultall{
     top: 150px;
-    left: 410px;
+    margin: auto;
+    padding-right: 25px;
     height: 655px;
     width: 520px;
     position: relative;
@@ -57,8 +64,7 @@ body{
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .resultitemimg{
     padding: 0px 20px;
