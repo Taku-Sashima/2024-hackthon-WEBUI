@@ -29,7 +29,7 @@ export default function Result() {
     <>
       <div className='back'>
         <div className="backimg"><img className="img" src={`${MOC_URL}backresult.png`} alt="back" /></div>
-        <div className="topname" > かぐぞう</div>
+        <div className="topname" >かぐぞう</div>
         <div className="resultall">
           {/*セイさんが作った方、scentObjectはオブジェクトだからmapを直接使っちゃダメ、一意のkeyがないと言われる
           */}
