@@ -4,7 +4,7 @@ import '../../pages/Detail/Detail.css';
 import {host} from '../../config.js'
 
 export default function useSimilarScent(){
-  const [similarScent, setSimilarScent] = useState({});
+  const [similarScent, setSimilarScent] = useState(undefined);
 
   const getSimilarScent = (itemID) =>{
     const url = host + '/user_scent/' + String(itemID) +'/similar_scent_items'
