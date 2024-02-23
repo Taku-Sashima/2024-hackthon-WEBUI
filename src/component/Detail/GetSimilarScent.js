@@ -1,27 +1,22 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios'
 import '../../pages/Detail/Detail.css';
+import {host} from '../../config.js'
 
 export default function useSimilarScent(){
   const [similarScent, setSimilarScent] = useState({});
-  const [itemID, setItemID] = useState(0)
-  const [tempName, setTempName] = useState("")
 
-  useEffect(() => {
-    const url = 'http://localhost:8000//user_scent/' + String(itemID) +'/similar_scent_items'
-    getSimilarScent(url);
-  },[]);
-
-  const getSimilarScent = (url) =>{
+  const getSimilarScent = (itemID) =>{
+    const url = host + '/user_scent/' + String(itemID) +'/similar_scent_items'
     axios.get(url)
       .then(response => {
         setSimilarScent(response.data);
-        console.log(similarScent);
+        console.log("similar Scent", similarScent);
       })
       .catch(() => {
         console.log('通信に失敗しました');
       });
   }
 
-  return [similarScent, setItemID]
+  return [similarScent, getSimilarScent]
 }

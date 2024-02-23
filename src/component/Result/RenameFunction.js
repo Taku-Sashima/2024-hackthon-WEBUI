@@ -3,7 +3,7 @@ import '../../pages/Result/Result.css';
 
 import usePatchName from './PatchName';
 
-export default function RenameFunction(props){
+export default function RenameFunction(props) {
   const overlay = {
     position: "fixed",
     top: 0,
@@ -24,15 +24,15 @@ export default function RenameFunction(props){
     borderRadius: "20px",
   };
 
-  const input={
+  const input = {
     lineHeight: "50px",
     fontSize: "50px",
   };
 
-  const button ={
+  const button = {
     backgroundColor: '#62b6f5',
     width: '200px',
-    height:'40px',
+    height: '40px',
     textAlign: "center",
     position: "static",
     margin: "auto",
@@ -43,23 +43,19 @@ export default function RenameFunction(props){
 
   const patchName = usePatchName();
 
-  const closeModal = () => {
+  const closeModal = async () => {
     props.setShowModal(false);
-    props.update()
-    var temp_name=props.text
-    if (props.text===""){
+    if (props.text === "") {
       ;//newNameを更新しない
-    }else{
-      props.setNewName(props.text);
-      patchName(props.itemID, props.text)
-      props.Text("");
+    } else {
+      await patchName(props.itemID, props.text)
+      props.update()
     }
   };
 
-
-  return(
+  return (
     <>
-      {props.showModal ? ( // showModalがtrueだったらModalを表示する
+      {props.showModal ? (// showModalがtrueだったらModalを表示する
         <div className="overlay" style={overlay} >
           <div className="modalContent" style={modalContent}>
             <input style={input}
@@ -69,11 +65,11 @@ export default function RenameFunction(props){
               type="text"
             />
             <div style={button} onClick={closeModal}>
-            名前を変更する
+              名前を変更する
             </div>
           </div>
         </div>
-      ):(
+      ) : (
         <></>
       )}
     </>
