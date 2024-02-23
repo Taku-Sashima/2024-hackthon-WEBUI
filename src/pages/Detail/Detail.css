@@ -99,3 +99,19 @@
 .itemall::-webkit-scrollbar {
   display: none;
 }
+.reverseButton {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 120px;
+  margin: auto;
+  padding: 10 10 10 10;
+  padding: 1rem 4rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  background: #0b60a3;
+  color: #ffffff;
+  position: relative;
+}

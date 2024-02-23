@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import './Detail.css'
 
@@ -31,6 +32,9 @@ export default function Detail() {
               .slice(0, 10)
               .map((v, i) => <SimilarScent key={v.id} details={v} listIndex={i} />)}
         </div>
+        <Link to="/" className="reverseButton">
+          一覧に戻る
+        </Link>
       </div>
     </div>
   )
