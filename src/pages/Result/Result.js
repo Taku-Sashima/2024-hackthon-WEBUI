@@ -33,11 +33,11 @@ export default function Result() {
         <div className="resultall">
           {/*セイさんが作った方、scentObjectはオブジェクトだからmapを直接使っちゃダメ、一意のkeyがないと言われる
           */}
-          {/* {scentObject &&
-            scentObject.map((v) => <ScentList details={v} update={update} />)} */}
-          {scentObject && Object.keys(scentObject).map(key => (
+          {scentObject &&
+            scentObject.map((v) => <ScentList key={v.id} details={v} update={update} />)}
+          {/* {scentObject && Object.keys(scentObject).map(key => (
             <ScentList key={key} details={scentObject[key]} update={update} />
-          ))}
+          ))} */}
         </div>
       </div>
     </>
