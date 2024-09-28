@@ -1,4 +1,8 @@
 # WEB UI
+## OpenHack U 2024 Tokyoに出場した際に作成したものです
+その時の動画↓
+https://www.youtube.com/live/VB_LScUyFnk?si=VjJbpBYXvLOy0Pyn[https://www.youtube.com/live/VB_LScUyFnk?si=VjJbpBYXvLOy0Pyn]
+
 
 ### ファイル・フォルダ構成
 
